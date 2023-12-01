@@ -1,0 +1,18 @@
+<div class=" mt-5 container">
+    <h1 class="ms-5">Register Here</h1>
+    <form class="shadow border w-50 p-5 rounded" >
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Username" name="uname">
+        </div >
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email ID" name="email">
+        </div>
+        <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password" name="password">
+        </div>
+        <div class="mb-3">
+            <input type="submit" (click)="register()" class="btn btn-success me-3" value="Register">
+            <span>Already User? Click here to <a routerLink="">Login</a></span>
+        </div>
+    </form>
+</div>

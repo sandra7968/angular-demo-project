@@ -1,0 +1,38 @@
+ ANGULAR - FrontEnd Technology : Single Page Application
+ -----------------------------------------------------------------------------------
+
+ Basic Commands
+ ----------------
+
+ 1. to create project: ng new project-name
+ 2. to run project: ng serve
+ 3. to create new component: ng g c component-name
+
+ Basic Features
+ -----------------
+
+ 1. Module: Used to hold multiple components and helps import packages to design Page
+ 2. Components: A part of UI, consist of html,css and ts file and its selector to use it in another page - Root Component : AppComponent
+ 3. Decorator: to add meta data (data inside another data), indicated using @
+ 4. Selectors: to display component design in another html file
+ 5. Data Binding: Data sharing within a component (html,ts file)
+       - One way Binding: 
+              - component(ts) to view (html)
+                  - string interpolation : use {{property-name}} in html page
+                  - property Binding: bind class property with html tag attribute - [attribute] = "property-name"
+              - view (html) to component(ts)
+                  - event Binding: use (event-name)="function-call"
+                  - event Binding using $event : use (event-name)="function-name($event)" - to get events in ts file
+                  - event Binding template reference variable: use #variable-name
+       - Two way Binding: Data sharing in both directions at the same time
+              - Template driven forms: form will design in html first
+                  - import FormsModule in Module file
+                  - use ngModel attribute: syntax - [(ngModel)]="class property", if its inside form tag, must set name attribute of that input tag
+              - Model driven forms: first create form model in ts file
+ 6. To set up path for component
+       - define routes in routing.Module ts file
+              - syntax: {path:'',component:component-name}
+       - use router-out;et selector in root component
+ 7. routerLink to redirect from one component to another in tag
+ 8. Dependency Injection:
+       - syntax: constructor(access-specifier component-property:dependent classname){}

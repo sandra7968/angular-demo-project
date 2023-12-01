@@ -1,0 +1,24 @@
+<h4 class="text-center">Employee Details</h4>
+<div class="d-flex w-50 justify-content-center align-items-center m-5 p-2">
+    <input #user class="form-control" type="text" placeholder="Enter Employee Name" (change)="getEmpName($event)">
+    <button class="btn btn-success" (click)="userSubmit(user)">Submit</button>
+</div>
+
+<form class="border p-5 text-center w-50 m-5" (ngSubmit)="empSubmit()">
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Employee Designation" name="empDesg" [(ngModel)]="empDesg">
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Employee Salary"name="empSalary" [(ngModel)]="empSalary">
+    </div>
+    <div class="mb-3">
+        <input type="submit" class="btn btn-success" value="submit">
+    </div>
+</form>
+<div class="text-center"><button class="btn btn-primary" (click)="userAdd()">Add</button></div>
+<div style="height: auto;" class=" d-flex justify-content-center align-items-center w-100 ">
+   <div class="shadow p-5 text-center">
+        <img width="250px" [src]="empImgUrl" alt="{{empName}}">
+        <h2>Employee Name: {{empName}}</h2>
+   </div>
+</div>
